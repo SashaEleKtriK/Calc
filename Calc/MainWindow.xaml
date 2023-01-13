@@ -1,0 +1,133 @@
+﻿<Window x:Class="Calc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calc"
+        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800" Style="{DynamicResource winStyle}" Closing="Window_Closing" Cursor="Hand" WindowStartupLocation="CenterScreen" Topmost="True" ResizeMode="NoResize">
+
+
+
+    <Grid x:Name="MainCulWin" Margin="0,0,0,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="70*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Style="{DynamicResource mnStyle}" >
+
+            <MenuItem Style="{DynamicResource Header1}" Header="WinSize" >
+                <MenuItem Style="{DynamicResource Header1}" Click="MenuItem_Click_1" Header="1000X800" ></MenuItem>
+                <MenuItem Style="{DynamicResource Header1}" Click="MenuItem_Click_1" Header="800X600"></MenuItem>
+                <MenuItem Style="{DynamicResource Header1}" Click="MenuItem_Click_1" Header="600X400" ></MenuItem>
+            </MenuItem>
+
+
+            <MenuItem Style="{DynamicResource Header1}" Header="Style" >
+                <MenuItem Style="{DynamicResource Header1}" Click="Style_Click" Header="Matrix.xaml" ></MenuItem>
+                <MenuItem Style="{DynamicResource Header1}" Click="Style_Click" Header="Standart.xaml"></MenuItem>
+                <MenuItem Style="{DynamicResource Header1}" Click="Style_Click" Header="Blue.xaml" ></MenuItem>
+            </MenuItem>
+
+            <MenuItem Style="{DynamicResource Header1}" Click="MenuItem_Click" Header="Exit" ></MenuItem>
+
+        </Menu>
+
+        <Grid Name="KeyBoard" ButtonBase.Click="KeyBoard_Click" Margin="4,4,4,4" Grid.Row="2" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Name ="column" Width="30*"/>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+
+            </Grid.RowDefinitions>
+
+
+
+        </Grid>
+        <Grid Margin="4,4,4,4" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70*"/>
+
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.ColumnSpan="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70*"/>
+                    <RowDefinition Height="15*"/>
+
+
+                </Grid.RowDefinitions>
+                <ListBox x:Name="culcHistoryBox"  Margin ="00,00,00,00"  Style="{DynamicResource culcControl}"/>
+
+                <TextBox x:Name="culcBox" TextWrapping="Wrap" Text=" " IsReadOnly="True" Style="{DynamicResource culcControl}" Margin="0,0,0,0" Grid.Row="1" TextAlignment="Right"  />
+
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15*"/>
+                    <RowDefinition Height="15*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+
+
+                </Grid.RowDefinitions>
+                <Grid Grid.Row ="0">
+                    <TextBox x:Name="factorialBox" TextWrapping="Wrap" Text="Click on 'More' to calculate    the factorial " IsReadOnly="True" Style="{DynamicResource culcControl}" FontSize="15" Margin="0,0,0,0"  TextAlignment="Center"  />
+                </Grid>
+                <Grid  Grid.Row="1" ToolTip="select units for trigonometric expressions">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <RadioButton Name="Rad" Content="Radians" Grid.Column="0" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="13" Style="{DynamicResource radioControl}" IsChecked="True"/>
+                    <RadioButton Name="Deg" Content="Degrees" Grid.Column="1" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="13" Style="{DynamicResource radioControl}" />
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Grid.ColumnSpan="3" Content="Quadratic"  Margin="0,0,0,0"  Style="{DynamicResource culcControl}" ToolTip="ax^2+bx+c=0" Click="Button_Click_1"/>
+
+                </Grid>
+                <Grid x:Name="alsoKeys" ButtonBase.Click="KeyBoard_Click" Grid.Row="3" Grid.ColumnSpan="3" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+
+                    </Grid.ColumnDefinitions>
+
+
+                </Grid>
+
+
+
+
+
+            </Grid>
+        </Grid>
+
+    </Grid>
+
+</Window>

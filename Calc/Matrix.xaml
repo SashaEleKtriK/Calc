@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Style x:Name="WindowStyle" x:Key="winStyle" TargetType="Window">
+
+        <Setter Property="Background" Value="Black" />
+
+    </Style>
+
+    <Style x:Name="menuStyle" x:Key="mnStyle" TargetType="Menu">
+        <Setter Property="Background" Value="#FF3D3333" />
+
+
+
+
+    </Style>
+    <Style x:Name="menuIt" x:Key="Header1" TargetType="Control">
+        <Setter Property="Background" Value="#FF3D3333" />
+        <Setter Property="BorderBrush" Value="#FF00FF3D"/>
+        <Setter Property="Foreground" Value="#FF00FF3D"/>
+
+    </Style>
+    <Style x:Name="culIt" x:Key="culcControl" TargetType="Control">
+        <Setter Property="Background" Value="Black" />
+        <Setter Property="BorderBrush" Value="#FF00FF3D"/>
+        <Setter Property="Foreground" Value="#FF00FF3D"/>
+        <Setter Property="FontFamily" Value="Technic"/>
+        <Setter Property="FontSize" Value="20"/>
+
+
+    </Style>
+    <Style x:Name="radioStyle" x:Key="radioControl" TargetType="RadioButton">
+        <Setter Property="Background" Value="#FF00FF3D" />
+        <Setter Property="BorderBrush" Value="#FF00FF3D"/>
+        <Setter Property="Foreground" Value="#FF00FF3D"/>
+        <Setter Property="FontFamily" Value="Technic"/>
+
+
+    </Style>
+
+</ResourceDictionary>
